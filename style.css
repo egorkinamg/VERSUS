@@ -1,0 +1,315 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Lato', sans-serif;
+
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* в ширину входит width padding border;  */
+* {
+    box-sizing: border-box;
+}
+
+/*  делаем картикки одоптивними  */
+img {
+    max-width: 100%
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+  color: inherit;
+}
+
+.container{
+    max-width: 970px;
+    margin:0 auto ;
+    padding: 0 15px ;
+}
+
+/* ===================start header ================== */
+.header{
+    padding: 43px 0 ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+}
+.header li a {
+    font-size: 11px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #999999;
+    margin-left: 40px; 
+    transition: all 0.5s;
+}
+.header li a:hover{
+    color:  #00D6B4;
+}
+.header ul {
+    display: flex;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+}
+/* ===================end header ================== */
+
+/* ===================hediing start ===============*/
+.heading2{
+    font-size: 48px;
+    line-height: 53px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 29px;
+    max-width: 465px;
+}
+.heading a{
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #00D6B4;
+    border: 1px solid #00D6B4;
+    border-radius: 3px;
+    padding: 10px 26px;
+    transition: all 0.5s;
+}
+.heading a::before{
+    content:'\2660';
+    font-size: 20px;
+    margin: 5px;
+}
+.heading a:hover{
+    background-color: #00D6B4;
+    color: #FFFFFF;
+}
+.heading{
+    background-image: url(img4/bg.jpg);
+    min-height: 540px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items:center;
+    text-align: center;
+    
+}
+.container{
+    align-items:center;
+}
+
+
+
+/* ===================hediing end===============*/
+
+/* ===================img-central start===============*/
+
+.img-central{
+    background-color:#222;
+    padding-top: 49px;
+    padding-bottom: 101px;
+}
+.img-central h2{
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 33px;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.box img{
+    width: calc(100% / 3 - 40px / 3);
+    transition: all 0.5s;
+   
+}
+
+
+.box img:hover{
+    filter: invert();
+    
+}
+
+/* ===================img-central end===============*/
+ /* -------------- footer start-------------------- */
+
+.footer-logo{
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #C2C2C2;
+    margin-bottom: 10px;
+}
+.footer{
+    background: #222222;
+    padding: 35px 0 37px;
+    display: flex;
+    text-align: center;
+    
+}
+.end{
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #999999
+}
+
+
+  /* -------------- footer end-------------------- */
+  /* ==============start media ============ */
+  @media (max-width: 768px) {
+    .box img{
+        width: calc(100% / 2 - 20px / 2)
+    }
+  }
+
+@media ( max-width: 500px) {
+    .box img{
+        width: 100%;
+    }
+    .heading2{
+        font-size: 40px;
+
+    }
+    .header li a{
+        margin-left: 10px;
+font-size: 10px;
+    }
+}
